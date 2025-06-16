@@ -26,7 +26,7 @@ public class VehicleHtmlController {
     public String getTestVehicles(Model model) {
         List<Vehicle> testVehicles = repo.findAll();
         if (testVehicles.isEmpty()) {
-            System.out.println("⚠️ Geen voertuigen gevonden.");
+            System.out.println("⚠️ Geens voertuigen gevonden.");
             return "error"; // Zorg dat je een error.html hebt of een tekst teruggeeft
         }
         model.addAttribute("vehicles", List.of(testVehicles.get(0)));
