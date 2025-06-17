@@ -50,7 +50,7 @@ public class Vehicle {
         return isStolen;
     }
 
-    // 🧰 Setters
+
     public void setVehicleId(Long vehicleId) {
         this.vehicleId = vehicleId;
     }

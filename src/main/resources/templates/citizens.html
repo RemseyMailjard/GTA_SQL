@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Citizens of GTA</title>
+    <meta charset="UTF-8">
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 90%;
+            margin: 30px auto;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #333;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+        }
+    </style>
+</head>
+<body>
+<h1>GTA Citizens Database</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Alias</th>
+        <th>Age</th>
+        <th>Profession</th>
+        <th>Wanted Level</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="citizen : ${citizens}">
+        <td th:text="${citizen.citizenId}">1</td>
+        <td th:text="${citizen.name}">Remsey Mailjard</td>
+        <td th:text="${citizen.alias}">The Architect</td>
+        <td th:text="${citizen.age}">33</td>
+        <td th:text="${citizen.profession}">Trainer & Fixer</td>
+        <td th:text="${citizen.wantedLevel}">1</td></tr>
+    </tbody>
+</table>
+</body>
+</html>
